@@ -1,0 +1,131 @@
+/* style.css (CORRIGIDO E ATUALIZADO) */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+:root {
+    --primary-color: #007bff;
+    --bg-color: #f4f7f6;
+    --card-bg: #ffffff;
+    --text-color: #333;
+    --shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    min-height: 100vh; /* Garante que o body ocupe a altura total da viewport */
+    display: flex; /* Adicionado display flex para layout vertical */
+    flex-direction: column; /* Organiza os filhos (header, main) em coluna */
+}
+
+/* --- ESTILO PARA O HEADER COM A LOGO --- */
+header {
+    background-color: #0080ff; /* Fundo branco para destacar */
+    padding: 20px 0; /* Espaçamento vertical */
+    text-align: center; /* Centraliza a imagem horizontalmente */
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05); /* Sombra suave */
+}
+
+header img {
+    max-width: 300px; /* Definindo um tamanho máximo para a logo */
+    height: auto;
+}
+
+/* --- NOVO ESTILO PARA O MAIN --- */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px; /* Espaçamento para não colar no header */
+    flex-grow: 1; /* Faz o main ocupar o espaço restante */
+}
+
+/* --- ESTILOS DO FORMULÁRIO (PARA LOGIN E CADASTRO) --- */
+.form-container { /* Renomeado de .login-container para .form-container */
+    background-color: var(--card-bg);
+    padding: 2rem 3rem;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    width: 100%;
+    max-width: 400px; /* Largura máxima consistente */
+    text-align: center;
+}
+
+.form-container h2 {
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+}
+
+.form-description { /* Novo estilo para a descrição do formulário de cadastro */
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.input-group {
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif; /* Garante que o input use a mesma fonte */
+}
+
+button {
+    width: 100%;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-family: 'Poppins', sans-serif; /* Garante que o botão use a mesma fonte */
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.error {
+    color: #d9534f;
+    min-height: 20px;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+/* --- NOVO: Estilo para o link de cadastro/login (genérico) --- */
+.form-link { /* Renomeado de .cadastro-link para .form-link */
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+}
+.form-link a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.form-link a:hover {
+    text-decoration: underline;
+}
